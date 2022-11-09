@@ -1,0 +1,22 @@
+{
+  "name": "soen-6441-w-flight-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/musketeer07/SOEN-6441-W-Flight-Tracker.git"
+  },
+  "author": "Arshiya Sahni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/musketeer07/SOEN-6441-W-Flight-Tracker/issues"
+  },
+  "homepage": "https://github.com/musketeer07/SOEN-6441-W-Flight-Tracker#readme",
+  "dependencies": {
+    "sqlite3": "^5.1.2"
+  }
+}
