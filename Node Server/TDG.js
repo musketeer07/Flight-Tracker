@@ -1,7 +1,5 @@
 const sqlite3 = require("sqlite3").verbose();
-
 class TDG {
-
     async getAllAirports() {
         return new Promise((resolve, reject) => {
             let db = new sqlite3.Database("./flights.db", sqlite3.OPEN_READONLY, (err) => {
