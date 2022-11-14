@@ -1,0 +1,83 @@
+<app-loader [isLoading]="loading"></app-loader>
+<header>
+    <div class="container">
+        <h1>Flights</h1>
+        <div class="input-group">
+          <input type="text" class="input" id="flightIATA" name="IATA" placeholder="IATA" autocomplete="off" [(ngModel)]="iata">
+          <input class="button--submit" value="Search By IATA" type="button" (click)="getFlight()">
+      </div>
+    </div>
+</header>
+<section>
+    <div class="content">
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let flight of flights" (opened)="panelOpenState = true"
+                (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        {{flight.flight_number}}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        {{flight.flight_name}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div class="details-row">
+                    <div class="details-column">
+                        <span>IATA :</span><span>{{flight.flight_iata}}</span>
+                    </div>
+                    <div class="details-column">
+                        <span>ICAO :</span><span>{{flight.flight_icao}}</span>
+                    </div>
+                </div>
+                <div class="details-row">
+                    <div class="details-column">
+                        <span>Departure :</span><span>{{flight.dep_airport}}</span>
+                    </div>
+                    <div class="details-column">
+                        <span>Dep Country Code :</span><span>{{flight.dep_country}}</span>
+                    </div>
+                </div>
+                <div class="details-row">
+                    <div class="details-column">
+                        <span>Dep IATA :</span><span>{{flight.dep_iata}}</span>
+                    </div>
+                    <div class="details-column">
+                        <span>Dep ICAO :</span><span>{{flight.dep_icao}}</span>
+                    </div>
+                </div>
+                <div class="details-row">
+                    <div class="details-column">
+                        <span>Arrival :</span><span>{{flight.arr_airport}}</span>
+                    </div>
+                    <div class="details-column">
+                        <span>Arr Country Code :</span><span>{{flight.arr_country}}</span>
+                    </div>
+                </div>
+                <div class="details-row">
+                    <div class="details-column">
+                        <span>Arr IATA :</span><span>{{flight.arr_iata}}</span>
+                    </div>
+                    <div class="details-column">
+                        <span>Arr ICAO :</span><span>{{flight.arr_icao}}</span>
+                    </div>
+                </div>
+                <div class="details-row">
+                    <div class="details-column">
+                        <span>Airline IATA :</span><span>{{flight.airline_iata}}</span>
+                    </div>
+                    <div class="details-column">
+                        <span>Airline ICAO :</span><span>{{flight.aircraft_icao}}</span>
+                    </div>
+                </div>
+                <div class="details-row">
+                    <div class="details-column">
+                        <span>Status :</span><span>{{flight.status}}</span>
+                    </div>
+                    <div class="details-column">
+                        <span>Location :</span><span (click)="openLocation(flight.lat,flight.lng)" class="flight-link">View</span>
+                    </div>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</section>

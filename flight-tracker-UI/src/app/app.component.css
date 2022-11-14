@@ -1,0 +1,152 @@
+.background {
+  margin: 4rem auto 0 auto;
+  background-image: url("../assets/background.png");
+  background-repeat: no-repeat;
+  height: 300px;
+  max-width: 1200px;
+  background-position: center;
+  background-size: contain;
+}
+
+nav {
+  margin-top: 1rem;
+  position: fixed;
+  width: 90px;
+  float: left;
+}
+
+.nav-item {
+  height: 90px;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.active{
+  color: #3f50b5 !important;
+}
+
+.nav-item:hover {
+  background-color: whitesmoke;
+  transition: .1s ease-in-out;
+}
+
+.nav-item:active {
+  background-color: whitesmoke;
+}
+
+.app-title{
+  position: fixed;
+  top:-0.5rem;
+  z-index: 100;
+}
+
+/* === removing default button style ===*/
+.button {
+  
+  margin: 2rem auto 0 1rem;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: black;
+  --animation-color: #3f50b5;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+/* For tablets */
+@media only screen and (max-width: 1024px) {
+  .app-title{
+    position: fixed;
+    top:-0.5rem;
+    z-index: 100;
+  }
+}
+
+/* For tablets */
+@media only screen and (max-width: 912px) {
+  nav {
+    top: -1rem;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    gap:2rem;
+    position: fixed;
+    background-color: white;
+    justify-content: flex-end;
+  }
+  
+  .nav-item {
+    width: 90px;
+    border-radius: 15px;
+    gap: 0.5rem;
+  }
+  .background {
+    margin-top: 0;
+  }
+}
+/* For mobile phones */
+@media only screen and (max-width: 600px) {
+  nav {
+    top: -1rem;
+    padding-top: 6rem;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    gap:2rem;
+    position: fixed;
+    background-color: white;
+    justify-content: flex-end;
+  }
+  .nav-item {
+    width: 90px;
+    border-radius: 15px;
+    gap: 0.5rem;
+  }
+  .background {
+    margin-top: 6rem;
+  }
+}
+/* For small mobile phones */
+@media only screen and (max-width: 376px) {
+  
+}

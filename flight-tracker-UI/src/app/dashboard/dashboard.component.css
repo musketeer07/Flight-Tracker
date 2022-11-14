@@ -1,0 +1,141 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-expansion-panel-header-title {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.mat-expansion-panel-body {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.mat-expansion-panel-header.mat-expanded {
+    background-color: aliceblue !important;
+    margin-bottom: 1rem;
+}
+
+.search-container {
+    display: grid;
+    grid-template-columns: 45% auto 45%;
+}
+.card-container{
+    width: 50vw;
+}
+
+.ng-autocomplete {
+    width: 100%;
+    display: table;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cssbuttons-io-button {
+    background: #3f50b5;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #3f50b5;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+
+.cssbuttons-io-button:disabled {
+    cursor: not-allowed;
+}
+
+.cssbuttons-io-button:disabled .icon {
+    cursor: not-allowed;
+    transition: none;
+}
+
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #3f50b5;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover:disabled .icon {
+    width: 2.2em;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #3f50b5;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
+
+/* For tablets */
+@media only screen and (max-width: 1024px) {
+    .card-container {
+        width: 60vw;
+    }
+}
+
+/* For tablets */
+@media only screen and (max-width: 912px) {
+    .card-container {
+        width: 70vw;
+    }
+    .search-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-row-gap:1rem ;
+    }
+    .icon-container {
+        rotate: 90deg;
+    }
+}
+/* For mobile phones */
+@media only screen and (max-width: 600px) {
+    .card-container {
+        width: 90vw;
+    }
+}
+/* For small mobile phones */
+@media only screen and (max-width: 376px) {
+  
+}

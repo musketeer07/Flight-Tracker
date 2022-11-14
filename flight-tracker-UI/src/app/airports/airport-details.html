@@ -1,0 +1,15 @@
+<style>
+  @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+</style>
+<h1 mat-dialog-title>{{data.name}}</h1>
+<div mat-dialog-content>
+  <div class="details-column">
+    <span>IATA :</span><span>{{data.iata_code}}</span>
+  </div>
+  <div class="details-column">
+    <span>ICAO :</span><span>{{data.icao_code}}</span>
+  </div>
+  <div class="details-column">
+    <span>Country Code :</span><span>{{data.country_code}}</span>
+  </div>
+</div>

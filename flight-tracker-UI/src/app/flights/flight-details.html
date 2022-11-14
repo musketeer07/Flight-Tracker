@@ -1,0 +1,46 @@
+<style>
+  @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+</style>
+<h1 mat-dialog-title>{{data.flight_number+"    "+data.flight_name}} </h1>
+<div mat-dialog-content>
+  
+  <div class="details-column">
+    <span>IATA :</span><span>{{data.flight_iata}}</span>
+  </div>
+  <div class="details-column">
+    <span>ICAO :</span><span>{{data.flight_icao}}</span>
+  </div>
+  <div class="details-column">
+    <span>Departure :</span><span>{{data.dep_airport}}</span>
+  </div>
+  <div class="details-column">
+    <span>Departure Country Code :</span><span>{{data.dep_country}}</span>
+  </div>
+  <div class="details-column">
+    <span>Departure IATA :</span><span>{{data.dep_iata}}</span>
+  </div>
+  <div class="details-column">
+    <span>Departure IATA :</span><span>{{data.dep_icao}}</span>
+  </div>
+  <div class="details-column">
+    <span>Arrival :</span><span>{{data.arr_airport}}</span>
+  </div>
+  <div class="details-column">
+    <span>Arrival Country Code :</span><span>{{data.arr_country}}</span>
+  </div>
+  <div class="details-column">
+    <span>Arrival IATA :</span><span>{{data.arr_iata}}</span>
+  </div>
+  <div class="details-column">
+    <span>Arrival IATA :</span><span>{{data.arr_icao}}</span>
+  </div>
+  <div class="details-column">
+    <span>Airline IATA :</span><span>{{data.airline_icao}}</span>
+  </div>
+  <div class="details-column">
+    <span>Airline ICAO :</span><span>{{data.aircraft_icao}}</span>
+  </div>
+  <div class="details-column">
+    <span>Status :</span><span>{{data.status}}</span>
+  </div>
+</div>

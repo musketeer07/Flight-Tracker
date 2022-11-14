@@ -1,0 +1,43 @@
+<div class="app-title">
+    <button data-text="Awesome" class="button">
+        <span class="actual-text">&nbsp;flight&nbsp;tracker&nbsp;</span>
+        <span class="hover-text" aria-hidden="true">&nbsp;flight&nbsp;tracker&nbsp;</span>
+    </button>
+</div>
+
+<nav>
+    <a class="nav-item" routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>
+        <div class="nav-icon">
+            <fa-icon [icon]="track" size="lg"></fa-icon>
+        </div>
+        <div class="nav-text">
+            Track
+        </div>
+    </a>
+    <a class="nav-item" routerLink="/airports" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>
+        <div class="nav-icon">
+            <fa-icon [icon]="airport" size="lg"></fa-icon>
+        </div>
+        <div class="nav-text">
+            Airports
+        </div>
+    </a>
+    <a class="nav-item" routerLink="/airlines" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>
+        <div class="nav-icon">
+            <fa-icon [icon]="airplane" size="lg"></fa-icon>
+        </div>
+        <div class="nav-text">
+            Airplanes
+        </div>
+    </a>
+    <a class="nav-item" routerLink="/flights" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>
+        <div class="nav-icon">
+            <fa-icon [icon]="flight" size="lg"></fa-icon>
+        </div>
+        <div class="nav-text">
+            Flights
+        </div>
+    </a>
+</nav>
+<div class="background"></div>
+<router-outlet></router-outlet>

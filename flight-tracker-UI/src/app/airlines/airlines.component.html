@@ -1,0 +1,32 @@
+<app-loader [isLoading]="loading"></app-loader>
+<header>
+  <div class="container">
+      <h1>Airlines</h1>
+      <div class="input-group">
+        <input type="text" class="input" id="IATA" name="airlineIATA" placeholder="IATA" autocomplete="off" [(ngModel)]="iata">
+        <input class="button--submit" value="Search By IATA" type="button" (click)="getAirline()">
+    </div>
+  </div>
+</header>
+<section>
+    <div class="content">
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let airline of airlines" (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{airline.name}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="details-row">
+            <div class="details-column">
+                <span>IATA :</span><span>{{airline.iata_code}}</span>
+            </div>
+            <div class="details-column">
+                <span>ICAO :</span><span>{{airline.icao_code}}</span>
+            </div>  
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+</section>
