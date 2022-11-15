@@ -23,5 +23,44 @@ describe('Flight-Tracker', function() {
         done();
     });
   });
-  
+  it('should list all airlines at /api/airlines', function(done) {
+    request('http://localhost:5000/api/airlines' , function(error, response, body) {
+        expect(response.statusCode).to.equal(200);
+        done();
+    });
+  });
+  it('should list all flights at /api/flights', function(done) {
+    request('http://localhost:5000/api/flights' , function(error, response, body) {
+        expect(response.statusCode).to.equal(200);
+        done();
+    });
+  });
+  it('should list flight by iata at /api/flights/${flight_iata}', function(done) {
+    url = 'http://localhost:5000/api/flights/'+`${flight_iata}`;
+    request( url, function(error, response, body) {
+        expect(response.statusCode).to.equal(200);
+        done();
+    });
+  });
+  it('should list flight by FILTER at /api/flights/${flight_iata}', function(done) {
+    url = 'http://localhost:5000/api/flights/';
+    url = url+`?arr_iata=${arr_iata}&dep_iata=${dep_iata}`;
+    //http://localhost:5000/api/flights/?arr_iata=SVO&dep_iata=KEJ
+    request(url , function(error, response, body) {
+        expect(response.statusCode).to.equal(200);
+        done();
+    });
+  });
+  it('should list airports by iata at /api/airports/DFW', function(done) {
+    request('http://localhost:5000/api/airports/DFW' , function(error, response, body) {
+        expect(response.statusCode).to.equal(200);
+        done();
+    });
+  });
+  it('should list airlines by iata at /api/airlines/EK', function(done) {
+    request('http://localhost:5000/api/airlines/EK' , function(error, response, body) {
+        expect(response.statusCode).to.equal(200);
+        done();
+    });
+  });
 });
